@@ -45,5 +45,5 @@ h2{
 .buttons button:hover{
     background-color: rgb(100, 100, 100);
     color: red;
-    transition: 0.8s;
+    transition: 0.9s;
 }
