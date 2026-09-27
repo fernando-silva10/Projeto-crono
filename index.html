@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cronômetro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="cron">
+            <h1>Cronômetro</h1>
+            <h2>0</h2>
+            <div class="buttons">
+                <button onclick="start()">Start</button>
+                <button onclick="stop()">Stop</button>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let number = 0
+        let cronometro
+        let h2 = document.querySelector("h2")
+
+        function start(){
+            cronometro = setInterval(function(){
+                number++
+                h2.innerHTML = number
+            }, 100)
+        }
+
+        function stop(){
+            clearInterval(cronometro)
+        }
+    </script>
+
+</html>
